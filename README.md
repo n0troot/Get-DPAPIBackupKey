@@ -16,8 +16,7 @@ This utility performs a direct ADSI (Active Directory Service Interfaces) search
 ## Usage
 
 ```powershell
-.
-Get-DPAPIBackupKey.ps1
+.\Get-DPAPIBackupKey.ps1
 ```
 
 When prompted, enter your full domain name (e.g., `example.com`).
