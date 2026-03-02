@@ -1,6 +1,8 @@
 # Direct ADSI search
+$domain = Read-Host "Enter Full Domain Name"
+$domain = $domain.Replace(".",",DC=")
 $searcher = New-Object DirectoryServices.DirectorySearcher
-$searcher.SearchRoot = New-Object DirectoryServices.DirectoryEntry("LDAP://CN=System,DC=domain,DC=com")
+$searcher.SearchRoot = New-Object DirectoryServices.DirectoryEntry("LDAP://CN=System,DC=$domain")
 $searcher.Filter = "(objectClass=secret)"
 $searcher.PropertiesToLoad.Add("*")
 $results = $searcher.FindAll() foreach ($result in $results) {
