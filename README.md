@@ -1,3 +1,6 @@
+[![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue?logo=powershell)](https://github.com/PowerShell/PowerShell)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # Get-DPAPIBackupKey
 
 A simple PowerShell script to extract DPAPI backup keys from Active Directory.
@@ -35,4 +38,4 @@ The script will:
 
 ## License
 
-Open source
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
