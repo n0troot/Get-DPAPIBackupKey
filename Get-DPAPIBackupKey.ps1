@@ -5,7 +5,8 @@ $searcher = New-Object DirectoryServices.DirectorySearcher
 $searcher.SearchRoot = New-Object DirectoryServices.DirectoryEntry("LDAP://CN=System,DC=$domain")
 $searcher.Filter = "(objectClass=secret)"
 $searcher.PropertiesToLoad.Add("*")
-$results = $searcher.FindAll() foreach ($result in $results) {
+$results = $searcher.FindAll() 
+foreach ($result in $results) {
     $name = $result.Properties["name"][0]
     Write-Host "=== Key Name: $name ==="
 
